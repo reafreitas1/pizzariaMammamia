@@ -29,7 +29,7 @@ public class PizzaService {
         String txt = "SELECT * FROM menu_pizzas WHERE codigo_pizza>" + id;
         Pizza tabela = null;
         //user=root, pass=abcd1234, localhost 127.0.0.1
-        try (Connection ligacao = DriverManager.getConnection("jdbc:mariadb://localhost/mammamia_db", "root", "abcd1234")) {
+        try (Connection ligacao = DriverManager.getConnection("jdbc:mariadb://localhost/mammamia_db", "root", "******")) {
 
             try (Statement stmt = ligacao.createStatement()) {
 
@@ -65,7 +65,7 @@ public class PizzaService {
         String msg = "erro_update";
         String txt = "UPDATE menu_pizza SET preco=20, descricao='Napolitana', imagem='n.jpg' where codigo_pizza=" + id;
 
-        try (Connection ligacao = DriverManager.getConnection("jdbc:mariadb://localhost/mammamia_db", "root", "abcd1234")) {
+        try (Connection ligacao = DriverManager.getConnection("jdbc:mariadb://localhost/mammamia_db", "root", "******")) {
 
             try (Statement stmt = ligacao.createStatement()) {
 
@@ -93,7 +93,7 @@ public class PizzaService {
 
         @RequestMapping(value = "apagar")
         public String deletePizza (Model model, int id) {
-        try (Connection ligacao = DriverManager.getConnection("jdbc:mariadb://localhost/mammamia_db", "root", "abcd1234")) {
+        try (Connection ligacao = DriverManager.getConnection("jdbc:mariadb://localhost/mammamia_db", "root", "******")) {
 
                 try (Statement stmt = ligacao.createStatement()) {
 
