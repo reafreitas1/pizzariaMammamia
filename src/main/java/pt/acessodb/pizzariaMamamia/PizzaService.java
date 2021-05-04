@@ -23,12 +23,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PizzaService {
 
-    @RequestMapping(value = "listarone")//Processa o Java e devolve a page listar.html
+    @RequestMapping(value = "listarone")
     public String getOneItem(Model model, int id) {
-        //Ligar a BD depois obter os dados das Pizzas na tabela pizza
+        
         String txt = "SELECT * FROM menu_pizzas WHERE codigo_pizza>" + id;
         Pizza tabela = null;
-        //user=root, pass=abcd1234, localhost 127.0.0.1
+       
         try (Connection ligacao = DriverManager.getConnection("jdbc:mariadb://localhost/mammamia_db", "root", "******")) {
 
             try (Statement stmt = ligacao.createStatement()) {
