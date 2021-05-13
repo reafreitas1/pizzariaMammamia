@@ -2,12 +2,13 @@ Creation of tables identifying primary and foreign keys using DBeaver. In Netbea
 
 - Request Mapping
 - Controller
-- commands SQL in MariaDb
+- Commands SQL in MariaDb
 - Commands try/catch
 - Constructors
 - Gets and Setters
+- Unit Testing
 - Pom
-- Exception
+- Exceptions
 - HTML
 - CSS
 
